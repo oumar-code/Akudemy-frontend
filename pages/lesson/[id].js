@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function LessonDetail() {
@@ -73,7 +74,7 @@ export default function LessonDetail() {
           </div>
         )}
       </form>
-      <a href="/lessons" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Lessons</a>
+      <Link href="/lessons" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Lessons</Link>
     </main>
   );
 }

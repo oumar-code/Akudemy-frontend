@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Lessons() {
   const [lessons, setLessons] = useState([]);
@@ -24,7 +25,7 @@ export default function Lessons() {
           </li>
         ))}
       </ul>
-      <a href="/" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Home</a>
+      <Link href="/" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Home</Link>
     </main>
   );
 }
