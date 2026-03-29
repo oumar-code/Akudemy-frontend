@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -37,8 +38,8 @@ export default function Home() {
         </button>
       </form>
       {status && <div style={{ color: status.startsWith('Thank') ? 'green' : 'red', marginBottom: '1rem' }}>{status}</div>}
-      <a href="/demo-lesson" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginBottom: '1rem' }}>Try a Demo Lesson</a>
-      <a href="/dashboard" style={{ color: '#0052CC', textDecoration: 'underline' }}>Go to Dashboard (coming soon)</a>
+      <Link href="/demo-lesson" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginBottom: '1rem' }}>Try a Demo Lesson</Link>
+      <Link href="/dashboard" style={{ color: '#0052CC', textDecoration: 'underline' }}>Go to Dashboard (coming soon)</Link>
     </main>
   );
 }

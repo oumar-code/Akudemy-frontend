@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function DemoLesson() {
   const [lesson, setLesson] = useState(null);
@@ -58,7 +59,7 @@ export default function DemoLesson() {
           </div>
         )}
       </form>
-      <a href="/" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Home</a>
+      <Link href="/" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Home</Link>
     </main>
   );
 }

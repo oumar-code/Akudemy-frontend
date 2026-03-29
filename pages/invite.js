@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Invite() {
   return (
     <main style={{ fontFamily: 'sans-serif', padding: '2rem', maxWidth: 600, margin: 'auto' }}>
@@ -8,7 +10,7 @@ export default function Invite() {
         <li><b>Teachers:</b> Explore content creation and classroom features.</li>
         <li><b>Content Creators:</b> Help us expand our lesson library.</li>
       </ul>
-      <p>Interested? <a href="/feedback" style={{ color: '#0052CC', textDecoration: 'underline' }}>Give Feedback</a> or email us at <a href="mailto:team@akulearn.com">team@akulearn.com</a>.</p>
+      <p>Interested? <Link href="/feedback" style={{ color: '#0052CC', textDecoration: 'underline' }}>Give Feedback</Link> or email us at <a href="mailto:team@akulearn.com">team@akulearn.com</a>.</p>
     </main>
   );
 }

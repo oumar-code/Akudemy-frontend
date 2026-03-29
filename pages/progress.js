@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Progress() {
   const [progress, setProgress] = useState(null);
@@ -19,7 +20,7 @@ export default function Progress() {
     }
   }, [token]);
 
-  if (!token) return <main style={{ fontFamily: 'sans-serif', padding: '2rem' }}>Please <a href="/login">login</a> to view your progress.</main>;
+  if (!token) return <main style={{ fontFamily: 'sans-serif', padding: '2rem' }}>Please <Link href="/login">login</Link> to view your progress.</main>;
   if (!progress || lessons.length === 0) return <main style={{ fontFamily: 'sans-serif', padding: '2rem' }}>Loading...</main>;
 
   return (
@@ -32,7 +33,7 @@ export default function Progress() {
           </li>
         ))}
       </ul>
-      <a href="/lessons" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Lessons</a>
+      <Link href="/lessons" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Lessons</Link>
     </main>
   );
 }

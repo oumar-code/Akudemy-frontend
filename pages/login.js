@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -41,7 +42,7 @@ export default function Login() {
         </button>
       </form>
       {status && <div style={{ color: status.startsWith('Login') ? 'green' : 'red', marginTop: '1rem' }}>{status}</div>}
-      <a href="/" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Home</a>
+      <Link href="/" style={{ color: '#0052CC', textDecoration: 'underline', display: 'block', marginTop: '2rem' }}>Back to Home</Link>
     </main>
   );
 }
